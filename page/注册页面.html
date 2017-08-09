@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+    <title>剑灵注册框</title>
+    <link rel="shortcut icon" href="../images/icon.ico"/>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: url("../images/images/meimei33.jpg") left -100px;
+            perspective: 3000px; /*通过眼睛去看3D元素的距离，使3D子元素获得一个透视的效果*/
+            overflow: hidden;
+            font: 14px/50px "微软雅黑"; /*字体大小为14px/字体行高位50px*/
+            color: #fff;
+        }
+
+        #face {
+            width: 640px;
+            height: 400px;
+            transform-style: preserve-3D; /*将元素设置为3D*/
+            background: rgba(0, 0, 0, 0.5);
+            margin: 120px auto 0px auto;
+            transform: rotateX(60deg) rotateZ(-50deg); /*倾斜*/
+            transition: all 2S; /* 过度-》 就本来只有1S 就发生完成的事情变成需要10S 才发生完成*/
+            position: relative; /*设置为参照物*/
+        }
+
+        #face:hover {
+            transform: rotateX(0deg) rotateZ(0deg);
+        }
+
+        #content {
+            width: 640px;
+            height: 400px;
+            padding: 15px 0px;
+        }
+
+        #content:before, #content:after {
+            content: "";
+            position: absolute; /*以face 为标准定位*/
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        #content:before {
+            /*在 content 之前*/
+            transform-origin: left center; /*以方向为标准-》旋转*/
+            transform: rotateY(90deg);
+            width: 15px;
+        }
+
+        #content:after {
+            /*在 content 之后*/
+            top: auto;
+            left: 0px;
+            transform-origin: bottom center; /*以方向为标准-》旋转*/
+            transform: rotateX(90deg);
+            height: 15px;
+        }
+
+        #content dl {
+            height: 50px;
+            line-height: 50px;
+            margin: 10px 0px;
+        }
+
+        #content dl dt {
+            width: 180px;
+            text-align: right;
+            float: left;
+        }
+
+        #content dl dd {
+            width: 420px;
+            float: right;
+        }
+
+        input {
+            width: 320px;
+            height: 24px;
+            padding: 5px;
+            border: 1px solid #fff;
+        }
+
+        input[type="submit"] {
+            width: 320px;
+            height: 44px;
+            border: 4px solid #fff;
+            background: #51a8ff;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 5px;
+            transition: all 500ms;
+        }
+
+        input[type="submit"]:hover {
+            background: hotpink;
+            color: yellow;
+        }
+
+        input:focus {
+            /*获取焦点*/
+            outline: 4px solid #007fff; /*input 外层*/
+        }
+    </style>
+</head>
+<body>
+<div id="face">
+    <div id="content">
+        <!--
+        action 提交地址
+        placeholder 默认显示内容，当输入内容时消失，当内容为空时显示 -->
+        <form action="demo_form.html" method="get">
+            <dl>
+                <dt>请输入您的昵称：</dt>
+                <dd><input type="text" placeholder="您的昵称"/></dd>
+            </dl>
+            <dl>
+                <!--电话类型为 tel 在手机显示为数字键盘  number为数字类型-->
+                <dt>请输入您的电话：</dt>
+                <dd><input type="number" placeholder="您的电话" max="2"/></dd>
+            </dl>
+            <dl>
+                <dt>请输入您的邮箱：</dt>
+                <dd><input type="Email" placeholder="您的邮箱"/></dd>
+            </dl>
+            <dl>
+                <dt>请输入您的个人网站：</dt>
+                <dd><input type="url" placeholder="您的个人网站"/></dd>
+            </dl>
+            <dl>
+                <dt>请选择您喜欢的颜色：</dt>
+                <dd><input type="color"/></dd>
+            </dl>
+            <dl>
+                <dt>提交咯：</dt>
+                <dd><input type="submit" value="提交咯"/></dd>
+            </dl>
+        </form>
+    </div>
+</div>
+</body>
+</html>

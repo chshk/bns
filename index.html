@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>欢迎欢迎，热烈欢迎</title>
+    <link rel="shortcut icon" href="./images/icon.ico"/>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .centr{
+            width: 1280px;
+            margin: 0 auto;
+        }
+        body {
+            height: 680px;
+            background: url("images/bg.jpg");
+        }
+
+        .big {
+            position: relative;
+            margin: 0 auto;
+            width: 1280px;
+            height: 720px;
+            background: #464853 url("images/abgbg.jpg") center center;
+
+        }
+        .enter{
+            position: absolute;
+            top: 378px;
+            left: 388px;
+        }
+        .enter img{
+            border-radius: 200px;
+        }
+        #main {
+            position: fixed;
+            top: 0px;
+            left: 285px;
+            width: 720px;
+            height: 350px;
+            perspective: 1000px;
+        }
+
+        #main .box, #main .box2 {
+            width: 720px;
+            height: 190px;
+            cursor: pointer;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #main .box2 {
+            transform: rotateX(-110deg);
+            top: -10px;
+            left: 0px;
+            opacity: 0.5;
+        }
+
+        ul {
+            width: 1920px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            animation: slide2 20S linear infinite;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            margin: 20px 5px;
+        }
+
+        /*动画规则 动画名称*/
+        @keyframes slide {
+            from {
+                left: -880px;
+            }
+            /* 从{ .... } */
+            to {
+                left: 0px;
+            }
+            /* 到{ .... } */
+        }
+
+        @keyframes slide2 {
+            from {
+                left: 0px;
+            }
+            /* 从{ .... } */
+            to {
+                left: -880px;
+            }
+            /* 到{ .... } */
+        }
+    </style>
+</head>
+<body>
+<div class="big centr">
+    <div class="enter"><a href="./page/index.html"><img src="images/jinru.png" alt="" /></a></div>
+    <div id="main">
+        <div class="box">
+            <ul>
+                <li><img src="images/huan.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/ying.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/lai.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/dao.png" width="150px" height="150px"/></li>
+                <li><img src="images/0ziti.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/0ziti.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/7ziti.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/xiao.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/zu2.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/jianlinglogo.jpg" width="150px" height="150px"/></li>
+
+            </ul>
+        </div>
+        <div class="box2">
+            <ul>
+                <li><img src="images/huan.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/ying.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/lai.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/dao.png" width="150px" height="150px"/></li>
+                <li><img src="images/0ziti.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/0ziti.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/7ziti.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/xiao.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/zu2.jpg" width="150px" height="150px"/></li>
+                <li><img src="images/jianlinglogo.jpg" width="150px" height="150px"/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+ @charset "UTF-8";
+ /*初始化 begin*/
+
+ html,body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,legend,img,input,button {
+ 	margin:0;padding:0;
+ }
+ img,input button{
+ 	border:0;
+ }
+ ul,li,ol {
+ 	list-style:none;
+ }
+ body {
+ 	color:#333333;font:12px"Microsoft YaHei","宋体","Arial";
+ }
+ .clearfix:after{
+ 	content:"";
+ 	display:block;
+ 	height:0;
+ 	line-height: 0;
+ 	visibility:hidden;
+ 	clear:both;
+ }
+ .clearfix{
+ 	zoom:1;
+ }
+ a{
+ 	color:#333333;text-decoration:none;
+ }
+ a:hover{
+ 	color: #FF6600;
+ }
+ .fl {
+ 	float: left;
+ }
+ .fr {
+ 	float: right;
+ }
+  /*初始化 end*/

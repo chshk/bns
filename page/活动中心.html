@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>活动中心</title>
+	<link rel="shortcut icon" href="../images/icon.ico"/>
+	<link rel="stylesheet" href="../css/活动中心.css"/>
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script>
+		//轮播图部分
+		$(function(){
+			var index=0;
+			var autoPlay = function (){
+				index++;
+				if(index>=$(".act-ad>ul>li").length){
+					index=0;
+				}
+				$(".act-ad>ul>li").eq(index).fadeIn( 1000).siblings("li").fadeOut();
+			}
+			$(".arrow-right").click(autoPlay);
+			$(".arrow-left").click(function(){
+				index--;
+				if(index<=0){
+					index=$(".act-ad>ul>li").length-1;
+				}
+				$(".act-ad>ul>li").eq(index).fadeIn().siblings("li").fadeOut();
+			});
+				//自动轮播
+			    var timer=setInterval(autoPlay,2000);
+
+				//鼠标移入自动轮播停止
+					$(".act-ad").mouseover(function(){
+					  clearInterval(timer);
+				});
+				//鼠标离开自动轮播开始
+					$(".act-ad").mouseout(function(){
+					timer=setInterval(autoPlay,2000)
+				})
+			})
+	</script>
+</head>
+<body>
+	<!--页面头部 B-->
+	<div class="header">
+		<div class="header-inner layout">
+			<h1 class="logo"title="Q游助手">
+				<a href="#">
+					<img src="../images/img/logo_2.png" alt="Q游助手"width="172" height="72"/>
+				</a>
+			</h1>
+			<div id="top-nav">
+					<span><a href="">登录</a><span>|</span></span>
+					<span><a href="">产品指引</a><span>|</span></span>
+					<span><a href="">官方微博</a><span>|</span></span>
+					<span><a href="">官方论坛</a><span>|</span></span>
+					<span><a href="">收藏本页</a></span>
+			</div>
+			<div id="JS_nav" class="nav">
+				<a href="./index.html" title="首页" target="_blank">首 页</a>
+				<a href="" title="自助功能" target="_blank">自助功能</a>
+				<a href="" title="操作记录" target="_blank">操作记录</a>
+				<a href="" title="活动中心" target="_blank">活动中心</a>
+				<a href="" title="新闻中心" target="_blank">新闻中心</a>
+			</div>
+
+		</div>
+	</div>
+	<!--页面头部 E-->
+
+	<!--页面内容部分 B-->
+	<div class="content layout">
+		<!--页面活动头部部分 B-->
+			<div class="crumb-nav">
+				<h2 class="content-title">活动中心</h2>
+				<div class="crumb-right">
+					<i class="icon-home"></i>
+					<a href="#">首页</a>><span>活动中心</span>
+				</div>
+			</div>
+		<!--页面活动头部部分 E-->
+		<!--页面活动中间代码 	B-->
+		<div class="act-center">
+				<!--页面轮播图部分B-->
+			<div class="act-ad ">
+				<ul>
+					<li><a href="#" ><img src="../images/img/timg2.jpg" alt="" width="980" height="270"/></a></li>
+					<li><a href="#" ><img src="../images/img/timg.jpg" alt="" width="980" height="270"/></a></li>
+					<li><a href="#" ><img src="../images/img/timg3.jpg" alt="" width="980" height="270"/></a></li>
+				</ul>
+				<div class="arrow">
+					<span class="arrow-left">&lt;</span>
+					<span class="arrow-right">&gt;</span>
+				</div>
+			</div>
+			<!--页面轮播图部分E-->
+			<div>
+				<ul class="act-list clearfix">
+					<li class="act-list-item">
+						<div class="imge row">
+							<a href="#" class="act-pic">
+								<div class="pic1">
+									<img src="../images/img/01.jpg" alt="" />
+								</div>
+								<!--<div class="pic2">-->
+									<!--<img src="../images/img/01.jpg" alt="" width="720" height="210"/>-->
+								<!--</div>-->
+							</a>
+						</div>
+						<div class="act-ct">
+							<h5 class="act-ct-tit">斗战神送大礼</h5>
+							<p class="act-ct-txt">活着，成为英雄，或者，死去，成为史诗！</p>
+							<a href="choujiang.html" class="btn-ljcy" target="_blank">立即参与</a>
+							<p class="act-ct-time">活动时间：2017.60.20-2017.08.04</p>
+						</div>
+					</li>
+					<li class="act-list-item">
+						<div class="imge row">
+							<a href="#" class="act-pic">
+								<div class="pic1">
+									<img src="../images/img/02.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="act-ct">
+							<h5 class="act-ct-tit">魔兽赏金来袭</h5>
+							<p class="act-ct-txt">赏金来袭，多用多送，惊喜连连</p>
+							<a href="choujiang.html" class="btn-ljcy" target="_blank">立即参与</a>
+							<p class="act-ct-time">活动时间：2017.60.20-2017.08.04</p>
+						</div>
+					</li>
+					<li class="act-list-item">
+						<div class="imge row">
+							<a href="#" class="act-pic">
+								<div class="pic1">
+									<img src="../images/img/00001.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="act-ct">
+							<h5 class="act-ct-tit">苍穹之剑</h5>
+							<p class="act-ct-txt">赏金来袭，多用多送，惊喜连连</p>
+							<a href="choujiang.html" class="btn-ljcy" target="_blank">立即参与</a>
+							<p class="act-ct-time">活动时间：2017.60.20-2017.08.04</p>
+						</div>
+					</li>
+					<li class="act-list-item">
+						<div class="imge row">
+							<a href="#" class="act-pic">
+								<div class="pic1">
+									<img src="../images/img/04.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="act-ct">
+							<h5 class="act-ct-tit">倩女幽魂</h5>
+							<p class="act-ct-txt">倩女幽魂 国之大事 生死之地 存亡之道</p>
+							<a href="choujiang.html" class="btn-ljcy" target="_blank">立即参与</a>
+							<p class="act-ct-time">活动时间：2017.60.20-2017.08.04</p>
+						</div>
+					</li>
+					<li class="act-list-item">
+						<div class="imge row">
+							<a href="#" class="act-pic">
+								<div class="pic1">
+									<img src="../images/img/05.jpg" alt="" />
+								</div>
+							</a>
+						</div>
+						<div class="act-ct">
+							<h5 class="act-ct-tit">阴阳师</h5>
+							<p class="act-ct-txt">混沌重返，阴阳唯我。</p>
+							<a href="choujiang.html" class="btn-ljcy" target="_blank">立即参与</a>
+							<p class="act-ct-time">活动时间：2017.60.20-2017.08.04</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!--页面活动中间代码 	E-->
+
+	</div>
+	<!--页面内容部分 E-->
+
+	<!--页面尾部部分 B-->
+
+	<div class="footer">
+		<p>
+			<a  target="_blank" href="#">腾讯互动娱乐</a>|
+			<a  target="_blank" href="#">服务条款</a>|
+			<a  target="_blank" href="#">广告服务</a>|
+			<a  target="_blank" href="#">腾讯游戏招聘</a>|
+			<a  target="_blank" href="#">腾讯游戏客服</a>|
+			<a  target="_blank" href="#">腾讯游戏地图</a>|
+			<a  target="_blank" href="#">腾讯游戏活动</a>|
+			<a  target="_blank" href="#">商务合作</a>|
+			<a  target="_blank" href="#">网站导航</a>
+		</p>
+		<p class="c">COPYRIGHT © 1998 - 2014 TENCENT. ALL RIGHTS RESERVED.</p>
+		<p><a  target="_blank" href="#">腾讯公司 版权所有</a></p>S
+
+	</div>
+		<!--页面尾部部分 	E-->S
+
+</body>
+
+</html>
